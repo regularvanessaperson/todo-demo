@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todo App</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; }
+    .auth { margin-bottom: 20px; }
+    .todo { margin-bottom: 10px; }
+    .completed { text-decoration: line-through; }
+  </style>
+</head>
+<body>
+  <div id="auth">
+    <h2>Login</h2>
+    <input type="text" id="username" placeholder="Username">
+    <input type="password" id="password" placeholder="Password">
+    <button onclick="login()">Login</button>
+    <button onclick="register()">Register</button>
+  </div>
+  <div id="app" style="display: none;">
+    <h2>Todos for <span id="currentUser"></span></h2>
+    <button onclick="logout()">Logout</button>
+    <input type="text" id="todoTitle" placeholder="New todo">
+    <button onclick="addTodo()">Add Todo</button>
+    <ul id="todoList"></ul>
+  </div>
+  <script type="module" src="app.js"></script>
+</body>
+</html>
